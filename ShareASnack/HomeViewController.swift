@@ -27,6 +27,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         mainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
         
         
+        
     }
     
     //MARK: - CollectionView Delegate Methods
@@ -48,6 +49,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         cell.backgroundColor = UIColor.black
         
+        cell.layer.cornerRadius = 25.0
+        cell.layer.borderWidth = 5.0
+        cell.layer.borderColor = CGColor.init(gray: 2.0, alpha: 1.0)
+        
         return cell
         
         
@@ -63,7 +68,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = mainTableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell 
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell
+    
+     
         
         return cell 
     }

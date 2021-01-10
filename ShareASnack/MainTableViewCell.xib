@@ -23,12 +23,17 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-M1-dDY">
                         <rect key="frame" x="16" y="316" width="84" height="22"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-uJ-v0c">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-uJ-v0c">
                                 <rect key="frame" x="0.0" y="0.0" width="25.5" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                 </state>
+                                <state key="selected" image="heart" catalog="system"/>
+                                <state key="highlighted" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="likeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CtG-gF-hS3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEL-qb-I4k">
                                 <rect key="frame" x="56.5" y="0.0" width="27.5" height="22"/>
@@ -36,6 +41,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="envelope" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VpP-je-yMe"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
@@ -61,6 +69,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="foodImage" destination="C6D-bv-DS8" id="ay3-rd-oqQ"/>
+                <outlet property="likeButton" destination="IkS-uJ-v0c" id="cz6-qD-NBN"/>
+                <outlet property="recipeLabel" destination="MaB-7T-sEO" id="iHC-hj-cs3"/>
+            </connections>
             <point key="canvasLocation" x="-43.478260869565219" y="243.41517857142856"/>
         </tableViewCell>
     </objects>

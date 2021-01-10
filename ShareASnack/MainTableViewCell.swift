@@ -9,9 +9,18 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var foodImage: UIImageView!
+    
+    @IBOutlet weak var recipeLabel: UILabel!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+
+        
+  
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -19,5 +28,18 @@ class MainTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func likeButton(_ sender: UIButton) {
+        //toggles button between two images
+        sender.isSelected.toggle()
+        sender.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        
+    
+        
+    }
+    
+    @IBAction func sendButton(_ sender: UIButton) {
+    }
+    
     
 }
