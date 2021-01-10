@@ -32,6 +32,7 @@ class MainTableViewCell: UITableViewCell {
     @IBAction func likeButton(_ sender: UIButton) {
         //toggles button between two images
         sender.isSelected.toggle()
+        
         sender.setImage(UIImage(systemName: "heart.fill"), for: .selected)
         
     
