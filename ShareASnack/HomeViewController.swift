@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
 
-    var top = ["1","1","1",]
+   
     @IBOutlet weak var horizontalCellView: UICollectionView!
     
     @IBOutlet weak var mainTableView: UITableView!
@@ -32,19 +32,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //MARK: - CollectionView Delegate Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
        
-        return top.count
+        return 10
+       
        }
      
         
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = horizontalCellView.dequeueReusableCell(withReuseIdentifier: "TopCell", for: indexPath)
+        let cell = horizontalCellView.dequeueReusableCell(withReuseIdentifier: "TopCell", for: indexPath) as! TopCollectionViewCell
+        
+    
        
         
-//        horizontalCellView.backgroundColor = UIColor.black
+        cell.backgroundColor = UIColor.black
         
         return cell
         
