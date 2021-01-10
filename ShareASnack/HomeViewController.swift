@@ -7,13 +7,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
 
-    
-
+    var top = ["1","1","1",]
     @IBOutlet weak var horizontalCellView: UICollectionView!
     
-    @IBOutlet weak var verticalCellView: UICollectionView!
+    @IBOutlet weak var mainTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,37 +21,50 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         horizontalCellView.delegate = self
         horizontalCellView.dataSource = self
         
-        verticalCellView.delegate = self
-        verticalCellView.dataSource = self
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
+        
+        mainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
+        
+        
     }
     
-    
+    //MARK: - CollectionView Delegate Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if collectionView == self.horizontalCellView {
-            return 15
-        }
        
-            if collectionView == self.verticalCellView {
-           
-            return 15
-                
-            }
-        return 5
+        return top.count
        }
      
         
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-          
+        let cell = horizontalCellView.dequeueReusableCell(withReuseIdentifier: "TopCell", for: indexPath)
+       
+        
+//        horizontalCellView.backgroundColor = UIColor.black
+        
+        return cell
         
         
     }
     
+    //MARK: - tableView Delegate Methods
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 5
+    }
     
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainTableViewCell 
+        
+        return cell 
+    }
     
 }
 
