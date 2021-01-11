@@ -18,6 +18,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true 
+        
         horizontalCellView.delegate = self
         horizontalCellView.dataSource = self
         

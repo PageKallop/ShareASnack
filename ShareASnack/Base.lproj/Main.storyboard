@@ -26,20 +26,23 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-P7-tUQ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-P7-tUQ">
                                         <rect key="frame" x="0.0" y="147" width="322" height="129"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-pt-iNI">
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-pt-iNI">
                                                 <rect key="frame" x="0.0" y="0.0" width="322" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-aq-hmY">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-aq-hmY">
                                                 <rect key="frame" x="0.0" y="52" width="322" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="08S-YP-47b"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHS-Ce-Ltx">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHS-Ce-Ltx">
                                                 <rect key="frame" x="0.0" y="99" width="322" height="30"/>
                                                 <color key="backgroundColor" red="0.29238482599999999" green="0.29238482599999999" blue="0.29238482599999999" alpha="0.66557716840000003" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -49,18 +52,21 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="pBN-u4-ifn" kind="show" id="KKj-2g-Wyk"/>
+                                                    <action selector="signInButtonPressed:" destination="DMq-jn-aR6" eventType="touchUpInside" id="Kzc-wp-GXc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="BlQ-OK-WwH"/>
+                                        </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-BX-gsH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8G-BX-gsH">
                                         <rect key="frame" x="143.5" y="351" width="35" height="40"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erz-u1-H9v">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erz-u1-H9v">
                                         <rect key="frame" x="0.0" y="466" width="322" height="30"/>
                                         <color key="backgroundColor" red="0.29238482599999999" green="0.29238482599999999" blue="0.29238482599999999" alpha="0.66557716840000003" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -86,6 +92,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l7Q-SA-BVs"/>
+                    <connections>
+                        <segue destination="pBN-u4-ifn" kind="show" identifier="ToMainScreen" id="vPH-Qy-46p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5v-UK-vca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,7 +137,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pBN-u4-ifn" kind="show" id="63Q-dK-5za"/>
+                                            <segue destination="pBN-u4-ifn" kind="show" id="SV1-m0-hSb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -343,7 +352,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-3k-wT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.1304347826087" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1648" y="88"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VPK-D6-wHb">
@@ -352,6 +361,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0HA-EO-7GE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BIG-fx-dBX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -362,11 +372,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anX-Td-HBU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3771.0144927536235" y="87.723214285714278"/>
+            <point key="canvasLocation" x="3626" y="88"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KKj-2g-Wyk"/>
+        <segue reference="vPH-Qy-46p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
