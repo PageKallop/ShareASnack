@@ -24,6 +24,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
+      
+        
         mainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
         
         
@@ -37,6 +39,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return 10
        
        }
+
      
         
     
@@ -57,6 +60,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         
     }
+    
+    
     
     //MARK: - tableView Delegate Methods
     

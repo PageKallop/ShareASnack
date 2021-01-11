@@ -15,8 +15,13 @@ class ProflieViewController: UIViewController {
     
     @IBOutlet weak var directionTextField: UITextView!
     
+    @IBOutlet weak var descriptionTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        descriptionTextField.borderStyle = .none
 
         
     }
