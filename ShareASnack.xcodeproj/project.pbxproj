@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 		C097E77325ABABD6001D9F52 /* ProflieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C097E77225ABABD6001D9F52 /* ProflieViewController.swift */; };
 		C0ABE02F25ACB9C000AAC68E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABE02E25ACB9C000AAC68E /* LogInViewController.swift */; };
 		C0ABE03225ACCFEA00AAC68E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABE03125ACCFEA00AAC68E /* RegisterViewController.swift */; };
-		C0B1CD7125AE146500C3B06D /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B1CD7025AE146500C3B06D /* GoogleService-Info-2.plist */; };
+		C0B1CDA025AE1BD300C3B06D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B1CD9F25AE1BD300C3B06D /* GoogleService-Info.plist */; };
 		C0BC116F25AA6E7800B53F9C /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC116D25AA6E7800B53F9C /* MainTableViewCell.swift */; };
 		C0BC117025AA6E7800B53F9C /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0BC116E25AA6E7800B53F9C /* MainTableViewCell.xib */; };
 		C3CC76BB0849C5245F187B44 /* Pods_ShareASnack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA6C765A6A2151FF14646F0 /* Pods_ShareASnack.framework */; };
@@ -42,7 +42,7 @@
 		C097E77225ABABD6001D9F52 /* ProflieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProflieViewController.swift; sourceTree = "<group>"; };
 		C0ABE02E25ACB9C000AAC68E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C0ABE03125ACCFEA00AAC68E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		C0B1CD7025AE146500C3B06D /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		C0B1CD9F25AE1BD300C3B06D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0BC116D25AA6E7800B53F9C /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		C0BC116E25AA6E7800B53F9C /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		EBA6C765A6A2151FF14646F0 /* Pods_ShareASnack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareASnack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,6 @@
 				356D80AD53BF680FEE9F8575 /* Pods-ShareASnack.debug.xcconfig */,
 				AB972D58A98DB3CE937300EB /* Pods-ShareASnack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,7 +103,7 @@
 				C0963CE425A8E9CE00B6796B /* Main.storyboard */,
 				C0963CEA25A8E9CF00B6796B /* Assets.xcassets */,
 				C0963CEC25A8E9CF00B6796B /* LaunchScreen.storyboard */,
-				C0B1CD7025AE146500C3B06D /* GoogleService-Info-2.plist */,
+				C0B1CD9F25AE1BD300C3B06D /* GoogleService-Info.plist */,
 				C0963CEF25A8E9CF00B6796B /* Info.plist */,
 				C0963CE725A8E9CE00B6796B /* ShareASnack.xcdatamodeld */,
 			);
@@ -178,9 +177,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B1CD7125AE146500C3B06D /* GoogleService-Info-2.plist in Resources */,
 				C0963CEE25A8E9CF00B6796B /* LaunchScreen.storyboard in Resources */,
 				C0963CEB25A8E9CF00B6796B /* Assets.xcassets in Resources */,
+				C0B1CDA025AE1BD300C3B06D /* GoogleService-Info.plist in Resources */,
 				C0BC117025AA6E7800B53F9C /* MainTableViewCell.xib in Resources */,
 				C0963CE625A8E9CE00B6796B /* Main.storyboard in Resources */,
 			);

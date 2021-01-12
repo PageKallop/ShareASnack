@@ -136,6 +136,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="registerButtonPressed:" destination="pbE-Gz-V9p" eventType="touchUpInside" id="ubQ-lo-NoD"/>
                                             <segue destination="pBN-u4-ifn" kind="show" id="SV1-m0-hSb"/>
                                         </connections>
                                     </button>
@@ -352,7 +353,6 @@
         <!--Item-->
         <scene sceneID="eBl-40-ks4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-3k-wT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ec4-Rn-Ty5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zgf-Yq-700"/>
                     <toolbarItems/>
@@ -365,6 +365,7 @@
                         <segue destination="DMq-jn-aR6" kind="relationship" relationship="rootViewController" id="DoB-3b-642"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-3k-wT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1648" y="88"/>
         </scene>
@@ -390,7 +391,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vPH-Qy-46p"/>
+        <segue reference="SV1-m0-hSb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
