@@ -21,11 +21,15 @@ class ProflieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+        
         descriptionTextField.borderStyle = .none
 
         
     }
     
+    
+ 
     @IBAction func addPhotoPressed(_ sender: UIButton) {
         
         let vc = UIImagePickerController()

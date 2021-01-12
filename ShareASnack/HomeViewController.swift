@@ -7,10 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
    
-    @IBOutlet weak var horizontalCellView: UICollectionView!
+    
+    
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -18,10 +19,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.hidesBackButton = true 
+        self.navigationItem.hidesBackButton = true
         
-        horizontalCellView.delegate = self
-        horizontalCellView.dataSource = self
+    
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
@@ -34,34 +34,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    //MARK: - CollectionView Delegate Methods
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
-        return 10
-       
-       }
-
-     
-        
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = horizontalCellView.dequeueReusableCell(withReuseIdentifier: "TopCell", for: indexPath) as! TopCollectionViewCell
-        
-    
-       
-        
-        cell.backgroundColor = UIColor.black
-        
-        cell.layer.cornerRadius = 25.0
-        cell.layer.borderWidth = 5.0
-        cell.layer.borderColor = CGColor.init(gray: 2.0, alpha: 1.0)
-        
-        return cell
-        
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
+    
+  
     
     
     
