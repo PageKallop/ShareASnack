@@ -10,8 +10,12 @@ import Firebase
 
 class RegisterViewController: UIViewController {
     
-    var email : String = ""
-    var password : String = ""
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+
     var docRef : DocumentReference!
     
 
@@ -21,18 +25,36 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+  
+    
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        //creating user database 
+        //checks that imputs are filled
+        if emailTextField.text == "", passwordTextField.text == "" {
+           
+        print("field has no imput")
+       
+    } else {
+        
+        //creating user database
         let dataToSave : [String : Any] = [
         
-            "email" : email,
-            "password": password
+            "email" : emailTextField.text!,
+            "password": passwordTextField.text!
         ]
-        
+        print("set ref")
         docRef = Firestore.firestore().document("users/\(UUID().uuidString)")
-             
+        docRef.setData(dataToSave) { (error) in
+            if let error = error {
+                print("error = \(error)")
+            } else {
+                self.performSegue(withIdentifier: "RegisteredToMainScreen", sender: self)
+            }
+        }
     }
+}
+    
+    
     
 
 }

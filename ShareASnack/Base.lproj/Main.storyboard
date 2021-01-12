@@ -137,7 +137,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerButtonPressed:" destination="pbE-Gz-V9p" eventType="touchUpInside" id="ubQ-lo-NoD"/>
-                                            <segue destination="pBN-u4-ifn" kind="show" id="SV1-m0-hSb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -153,6 +152,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n4p-Kk-lGn"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="M2M-Of-DIN" id="VtH-Nv-diI"/>
+                        <outlet property="passwordTextField" destination="IYj-K3-xpD" id="9Ql-yK-FK5"/>
+                        <segue destination="pBN-u4-ifn" kind="show" identifier="RegisteredToMainScreen" id="jxm-YQ-wXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wo-D8-H0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,7 +395,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SV1-m0-hSb"/>
+        <segue reference="jxm-YQ-wXl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
