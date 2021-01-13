@@ -99,7 +99,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="l7Q-SA-BVs"/>
                     <connections>
-                        <segue destination="pBN-u4-ifn" kind="show" identifier="ToMainScreen" id="vPH-Qy-46p"/>
+                        <outlet property="passwordTextField" destination="U8c-aq-hmY" id="9xO-VU-piw"/>
+                        <outlet property="userNameTextField" destination="U7g-pt-iNI" id="KBW-AT-89c"/>
+                        <segue destination="pBN-u4-ifn" kind="show" identifier="ToMainScreen" id="orl-Jt-Gjn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5v-UK-vca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -402,7 +404,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vPH-Qy-46p"/>
+        <segue reference="orl-Jt-Gjn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>

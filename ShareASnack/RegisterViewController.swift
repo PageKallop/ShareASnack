@@ -30,8 +30,11 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         //checks that imputs are filled
-        if emailTextField.text == "", passwordTextField.text == "" {
-           
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            //creates alert for empty fields or insufficient password
+            let alert = UIAlertController(title: "Empty Fields", message: "Please enter email and six character password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Re-enter", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         print("field has no imput")
        
     } else {
