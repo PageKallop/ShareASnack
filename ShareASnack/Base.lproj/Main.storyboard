@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snacklogin" translatesAutoresizingMaskIntoConstraints="NO" id="t55-A8-CHK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="S71-IQ-6eS">
                                 <rect key="frame" x="46" y="214" width="322" height="496"/>
                                 <subviews>
@@ -43,7 +46,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHS-Ce-Ltx">
                                                 <rect key="frame" x="0.0" y="99" width="322" height="30"/>
-                                                <color key="backgroundColor" red="0.29238482599999999" green="0.29238482599999999" blue="0.29238482599999999" alpha="0.66557716840000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" white="1" alpha="0.385968543" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="322" id="6vu-pU-WFu"/>
                                                 </constraints>
@@ -67,7 +70,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erz-u1-H9v">
                                         <rect key="frame" x="0.0" y="466" width="322" height="30"/>
-                                        <color key="backgroundColor" red="0.29238482599999999" green="0.29238482599999999" blue="0.29238482599999999" alpha="0.66557716840000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="1" alpha="0.38596854304635764" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="322" id="mjv-rj-gWO"/>
                                         </constraints>
@@ -87,7 +90,11 @@
                             <constraint firstItem="S71-IQ-6eS" firstAttribute="leading" secondItem="k0G-aV-Wl9" secondAttribute="leading" constant="46" id="67F-3v-KAt"/>
                             <constraint firstItem="S71-IQ-6eS" firstAttribute="top" secondItem="k0G-aV-Wl9" secondAttribute="top" constant="126" id="9Ze-V3-yiC"/>
                             <constraint firstItem="k0G-aV-Wl9" firstAttribute="bottom" secondItem="S71-IQ-6eS" secondAttribute="bottom" constant="152" id="Ksh-Rd-AzY"/>
+                            <constraint firstItem="t55-A8-CHK" firstAttribute="leading" secondItem="ykn-jH-zBq" secondAttribute="leading" id="MXw-EC-9jM"/>
                             <constraint firstItem="k0G-aV-Wl9" firstAttribute="trailing" secondItem="S71-IQ-6eS" secondAttribute="trailing" constant="46" id="Rca-5i-8hq"/>
+                            <constraint firstAttribute="trailing" secondItem="t55-A8-CHK" secondAttribute="trailing" id="bM3-99-8cB"/>
+                            <constraint firstAttribute="bottom" secondItem="t55-A8-CHK" secondAttribute="bottom" id="jI8-Ed-7Wh"/>
+                            <constraint firstItem="t55-A8-CHK" firstAttribute="top" secondItem="ykn-jH-zBq" secondAttribute="top" id="t18-lZ-IDO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l7Q-SA-BVs"/>
@@ -395,12 +402,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jxm-YQ-wXl"/>
+        <segue reference="vPH-Qy-46p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plate-svgrepo-com" width="502" height="502"/>
+        <image name="snacklogin" width="1127" height="2430"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
